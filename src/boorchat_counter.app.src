@@ -1,0 +1,11 @@
+{application, boorchat_counter, [
+  {description, "Boorchat counter"},
+  {vsn, "0.1"},
+  {registered, []},
+  {applications, [
+    kernel,
+    stdlib
+  ]},
+  {mod, {boorchat_counter_app, []}},
+  {env, []}
+]}.

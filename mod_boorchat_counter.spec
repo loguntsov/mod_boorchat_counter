@@ -1,0 +1,5 @@
+author: "Sergey Loguntsov <loguntsov@gmail.com>"
+category: "stats"
+summary: "Calculates messages sent by user"
+home: ""
+url: ""

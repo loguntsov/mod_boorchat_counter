@@ -1,0 +1,1 @@
+../lib/ejabberd/src/ejabberd_sql_pt.erl
