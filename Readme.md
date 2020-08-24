@@ -28,6 +28,8 @@ Result of this IQ is:
 
 * installed ejabbberd
 
+Tested with Ejabberd 20.07
+
 * make 
 
     ```sudo apt-get install make```
