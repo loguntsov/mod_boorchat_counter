@@ -17,7 +17,8 @@ It allows get counter by this IQ:
 
 Result of this IQ is:
 
-```<iq id="id_of_message" type="result" xml:lang="ru" to="test1@boorchat.ru/Psi+" from="test1@boorchat.ru">
+```
+<iq id="id_of_message" type="result" xml:lang="ru" to="test1@boorchat.ru/Psi+" from="test1@boorchat.ru">
 <results>
 <item jid="test1@boorchat.ru">72</item>
 </results>
