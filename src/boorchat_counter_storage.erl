@@ -60,5 +60,5 @@ get(Jid = #jid{}) ->
 
 increment(Jid) ->
   J = jid:remove_resource(Jid),
-  ets:update_counter(?ETS, J, { 2, 1}, {J, 1}),
+  ets:update_counter(?ETS, J, { 2, 1 }, {J, 0}),
   ok.
