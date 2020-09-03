@@ -15,8 +15,11 @@
   process_iq_counter_get/1
 ]).
 
--include("xmpp.hrl").
+
+-define(LAGER, true).
 -include("logger.hrl").
+
+-include("xmpp.hrl").
 -include("boorchat_counter_xmpp.hrl").
 
 -define(NS_BOORCHAT_COUNTER_GET, <<"urn:xmpp:boorchat:counter:get">>).
@@ -42,7 +45,9 @@ stop(Host) ->
   ejabberd_hooks:delete(user_send_packet, Host, ?MODULE, user_send_packet, 50),
   gen_iq_handler:remove_iq_handler(ejabberd_local, Host, ?NS_BOORCHAT_COUNTER_GET),
   gen_iq_handler:remove_iq_handler(ejabberd_sm, Host, ?NS_BOORCHAT_COUNTER_GET),
-  ok = application:stop(boorchat_counter),
+  proc_lib:spawn(fun() ->
+    ok = application:stop(boorchat_counter)
+  end),
   xmpp:unregister_codec(?XMPP_CODEC),
   ok.
 
